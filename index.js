@@ -25,13 +25,28 @@ async function loadCookies(page) {
   await loadCookies(page);
 
   await page.goto("https://www.cphbusiness.dk/", { waitUntil: "networkidle2" });
-  await page.screenshot({ path: "cp.png" });
+  await page.screenshot({ path: "cph.png" });
 
-  const declineButton = await page.$("#declineButton");
-  if (declineButton) {
-    await page.waitForSelector("#declineButton");
-    await declineButton.click();
-    await saveCookies(page);
+  try {
+    const declineButton = await page.$("#declineButton");
+    if (declineButton) {
+      const isButtonVisible = await page.evaluate((button) => {
+        const rect = button.getBoundingClientRect();
+        return rect.width > 0 && rect.height > 0;
+      }, declineButton);
+
+      if (isButtonVisible) {
+        console.log("Decline button is visible. Clicking...");
+        await declineButton.click();
+        await saveCookies(page);
+      } else {
+        console.log("Decline button is present but not visible.");
+      }
+    } else {
+      console.log("Decline button not found.");
+    }
+  } catch (error) {
+    console.error("An error occurred:", error);
   }
 
   await page.screenshot({ path: "cph2.png" });
