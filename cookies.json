@@ -1,0 +1,17 @@
+[
+  {
+    "name": "CookieInformationConsent",
+    "value": "%7B%22website_uuid%22%3A%225612d9fc-229b-4ced-829a-92236301ae99%22%2C%22timestamp%22%3A%222024-01-24T19%3A11%3A13.611Z%22%2C%22consent_url%22%3A%22https%3A%2F%2Fwww.cphbusiness.dk%2F%22%2C%22consent_website%22%3A%22cphbusiness.dk%22%2C%22consent_domain%22%3A%22www.cphbusiness.dk%22%2C%22user_uid%22%3A%22e7d6b9de-8757-4fc0-819a-53449603226c%22%2C%22consents_approved%22%3A%5B%22cookie_cat_necessary%22%5D%2C%22consents_denied%22%3A%5B%22cookie_cat_functional%22%2C%22cookie_cat_statistic%22%2C%22cookie_cat_marketing%22%2C%22cookie_cat_unclassified%22%5D%2C%22user_agent%22%3A%22Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F121.0.0.0%20Safari%2F537.36%22%7D",
+    "domain": "www.cphbusiness.dk",
+    "path": "/",
+    "expires": 1707333073,
+    "size": 765,
+    "httpOnly": false,
+    "secure": true,
+    "session": false,
+    "sameSite": "Lax",
+    "sameParty": false,
+    "sourceScheme": "Secure",
+    "sourcePort": 443
+  }
+]
